@@ -12,11 +12,11 @@ function App() {
     <div className="App">
       <Navbar />
       {/* <PersonProfile /> */}
-      <AccountHolderProfile />
+      {/* <AccountHolderProfile /> */}
       {/* <NewPost /> */}
       {/* <EditUser /> */}
       {/* <SinglePost /> */}
-      {/* <Home /> */}
+      <Home />
     </div>
   );
 }
