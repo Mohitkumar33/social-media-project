@@ -1,12 +1,12 @@
 import "./App.css";
-import { MockAPI } from "./components/mockAPI/MockAPI";
+import { Navbar } from "./components/navbar/Navbar";
 import { Home } from "./screens/home/Home";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Home />
-      {/* <MockAPI /> */}
     </div>
   );
 }
