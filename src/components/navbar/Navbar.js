@@ -13,6 +13,7 @@ import { CgProfile } from "react-icons/cg";
 import { BsBookmarks } from "react-icons/bs";
 import { GoHome } from "react-icons/go";
 import { BsPeople } from "react-icons/bs";
+import { FcManager } from "react-icons/fc";
 
 const Navbar = () => {
   return (
@@ -45,7 +46,7 @@ const Navbar = () => {
           <Icon as={GoHome} w="2rem" h="2rem" />
           <Icon as={BsPeople} w="2rem" h="2rem" />
           <Icon as={BsBookmarks} w="2rem" h="2rem" />
-          <Icon as={CgProfile} w="2rem" h="2rem" />
+          <Icon as={FcManager} w="2rem" h="2rem" />
         </HStack>
       </Flex>
     </div>
