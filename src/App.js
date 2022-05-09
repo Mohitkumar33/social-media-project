@@ -6,6 +6,7 @@ import { AccountHolderProfile } from "./screens/accountHolderProfile/AccountHold
 import { Home } from "./screens/home/Home";
 import { Login } from "./screens/login/Login";
 import { PersonProfile } from "./screens/personProfile/PersonProfile";
+import { Signup } from "./screens/signup/Signup";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <EditUser /> */}
       {/* <SinglePost /> */}
       {/* <Home /> */}
-      <Login />
+      {/* <Login /> */}
+      <Signup />
     </div>
   );
 }
