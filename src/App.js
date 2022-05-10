@@ -17,9 +17,9 @@ function App() {
       {/* <NewPost /> */}
       {/* <EditUser /> */}
       {/* <SinglePost /> */}
-      {/* <Home /> */}
+      <Home />
       {/* <Login /> */}
-      <Signup />
+      {/* <Signup /> */}
     </div>
   );
 }

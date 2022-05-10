@@ -1,4 +1,5 @@
 import { Box, Flex, Input, Text, Button } from "@chakra-ui/react";
+import { Footer } from "../../components/footer/Footer";
 
 const Signup = () => {
   const outerBoxStyles = {
