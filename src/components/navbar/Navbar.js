@@ -24,6 +24,10 @@ const Navbar = () => {
         borderTop="1px solid #CBD5E0"
         borderBottom="1px solid #CBD5E0"
         align="center"
+        pos="fixed"
+        bg="white"
+        width="100%"
+        zIndex={1}
       >
         <Text fontFamily="cursive" fontSize="1.4rem" fontWeight={540}>
           Instagram
