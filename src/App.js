@@ -2,24 +2,18 @@ import { EditUser } from "./components/editUser/EditUser";
 import { Navbar } from "./components/navbar/Navbar";
 import { NewPost } from "./components/newPost/NewPost";
 import { SinglePost } from "./components/singlePost/SinglePost";
-import { AccountHolderProfile } from "./screens/accountHolderProfile/AccountHolderProfile";
-import { Home } from "./screens/home/Home";
-import { Login } from "./screens/login/Login";
-import { PersonProfile } from "./screens/personProfile/PersonProfile";
-import { Signup } from "./screens/signup/Signup";
+import { AllRoutes } from "./routes/AllRoutes";
+import { FollowingFollowers } from "./screens/followingFollowers/FollowingFollowers";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <PersonProfile /> */}
-      {/* <AccountHolderProfile /> */}
+      <AllRoutes />
       {/* <NewPost /> */}
       {/* <EditUser /> */}
       {/* <SinglePost /> */}
-      <Home />
-      {/* <Login /> */}
-      {/* <Signup /> */}
+      {/* <FollowingFollowers /> */}
     </div>
   );
 }

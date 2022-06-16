@@ -13,11 +13,11 @@ const NewPost = () => {
   return (
     <Flex
       bg="rgba(128, 128, 128, 0.669)"
-      h="100%"
+      h="100vh"
       w="100%"
       align="center"
       justify="center"
-      pos="absolute"
+      pos="fixed"
       zIndex={1}
     >
       <Box
