@@ -5,11 +5,10 @@ const EditUser = () => {
   return (
     <Flex
       bg="rgba(128, 128, 128, 0.669)"
-      h="100%"
+      h="100vh"
       w="100%"
-      align="center"
       justify="center"
-      pos="absolute"
+      pos="fixed"
       zIndex={1}
     >
       <Box
@@ -20,7 +19,7 @@ const EditUser = () => {
         bg="white"
         pos="relative"
         pt="2.4rem"
-        mt="-12rem"
+        mt="5rem"
       >
         <Flex align="center" justify="space-between" mb="1rem">
           <Icon as={FcManager} w="3rem" h="3rem" color="gray.600" />

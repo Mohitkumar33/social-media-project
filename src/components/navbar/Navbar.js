@@ -14,24 +14,25 @@ import { BsBookmarks } from "react-icons/bs";
 import { GoHome } from "react-icons/go";
 import { BsPeople } from "react-icons/bs";
 import { FcManager } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
+    <Box pos="sticky" top={0} zIndex={1}>
       <Flex
         justify="space-between"
         p="0.7rem 20%"
         borderTop="1px solid #CBD5E0"
         borderBottom="1px solid #CBD5E0"
         align="center"
-        pos="fixed"
         bg="white"
         width="100%"
-        zIndex={1}
       >
-        <Text fontFamily="cursive" fontSize="1.4rem" fontWeight={540}>
-          Instagram
-        </Text>
+        <Link to="/">
+          <Text fontFamily="cursive" fontSize="1.4rem" fontWeight={540}>
+            Instagram
+          </Text>
+        </Link>
         <Box>
           <InputGroup>
             <InputLeftElement
@@ -47,13 +48,17 @@ const Navbar = () => {
           </InputGroup>
         </Box>
         <HStack spacing="1.8rem">
-          <Icon as={GoHome} w="2rem" h="2rem" />
+          <Link to="/">
+            <Icon as={GoHome} w="2rem" h="2rem" />
+          </Link>
           <Icon as={BsPeople} w="2rem" h="2rem" />
           <Icon as={BsBookmarks} w="2rem" h="2rem" />
-          <Icon as={FcManager} w="2rem" h="2rem" />
+          <Link to="/accountHolderProfile">
+            <Icon as={FcManager} w="2rem" h="2rem" />
+          </Link>
         </HStack>
       </Flex>
-    </div>
+    </Box>
   );
 };
 
