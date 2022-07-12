@@ -5,7 +5,7 @@ import App from "./App";
 import { makeServer } from "./server";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import store from "./app/store";
+import { store } from "./app/store";
 import { Provider } from "react-redux";
 
 // Call make Server
