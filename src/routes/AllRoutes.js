@@ -9,9 +9,9 @@ import { Signup } from "../screens/signup/Signup";
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/" element={<Home />} />
       <Route path="/personProfile" element={<PersonProfile />} />
       <Route path="/accountHolderProfile" element={<AccountHolderProfile />} />
       <Route path="/mock" element={<MockAPI />} />

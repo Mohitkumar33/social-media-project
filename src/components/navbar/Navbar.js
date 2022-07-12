@@ -30,7 +30,7 @@ const Navbar = () => {
       >
         <Link to="/">
           <Text fontFamily="cursive" fontSize="1.4rem" fontWeight={540}>
-            Instagram
+            Instagrem
           </Text>
         </Link>
         <Box>
