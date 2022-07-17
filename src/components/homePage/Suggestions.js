@@ -1,5 +1,4 @@
 import { Box, Flex, Text, Icon } from "@chakra-ui/react";
-
 import { MdOutlineAccountCircle } from "react-icons/md";
 
 const Suggestions = () => {
