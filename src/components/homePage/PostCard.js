@@ -47,7 +47,7 @@ const PostCard = ({ post }) => {
       </Flex>
       {post.comments.map((comment) => {
         return (
-          <Flex ml="1rem" align="center">
+          <Flex ml="1rem" align="center" key={comment._id}>
             <Text display="inline">@{comment.username} </Text>
             <Tooltip label="up vote" placement="auto-start" hasArrow>
               <ArrowUpIcon

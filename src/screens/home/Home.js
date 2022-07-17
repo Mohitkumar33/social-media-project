@@ -31,7 +31,7 @@ const Home = () => {
           <PostsSkeleton />
         ) : (
           posts.map((item) => {
-            return <PostCard post={item} />;
+            return <PostCard key={item._id} post={item} />;
           })
         )}
         {/* {} */}
