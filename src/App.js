@@ -1,15 +1,14 @@
-import { EditUser } from "./components/editUser/EditUser";
+import { useSelector } from "react-redux";
 import { Navbar } from "./components/navbar/Navbar";
-import { NewPost } from "./components/newPost/NewPost";
-import { SinglePost } from "./components/singlePost/SinglePost";
+import { authReducer } from "./features/auth/authSlice";
 import { AllRoutes } from "./routes/AllRoutes";
-import { FollowingFollowers } from "./screens/followingFollowers/FollowingFollowers";
-import { Login } from "./screens/login/Login";
 
 function App() {
+  const {token} = useSelector((store)=>store.auth)
   return (
     <div className="App">
-      <Navbar />
+      {token && <Navbar />}
+      
       {/* <Login /> */}
       <AllRoutes />
       {/* <NewPost /> */}

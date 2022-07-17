@@ -1,5 +1,5 @@
 import { Box, Flex, Input, Text, Button } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const outerBoxStyles = {
     w: "100vw",
-    h: "89vh",
+    h: "100vh",
     pos: "relative",
     pt: "5rem",
     background:
@@ -42,11 +42,17 @@ const Login = () => {
   };
 
   const loginHandler = async (username, password) => {
+    console.log("login called", username, password);
     const response = await dispatch(loginUser({ username, password }));
+    console.log(`this is response --> ${response}`);
     if (response?.payload.encodedToken) {
       navigate("/");
     }
   };
+
+  useEffect(() => {
+    if (token) navigate("/");
+  }, []);
 
   return (
     <Box sx={outerBoxStyles}>
@@ -78,6 +84,7 @@ const Login = () => {
           mb="5px"
           variant="outline"
           backgroundColor={"rgba(181, 181, 181, 0.8)"}
+          onClick={() => loginHandler("mohitkumar", "mohitkumar123")}
         >
           Test Login
         </Button>

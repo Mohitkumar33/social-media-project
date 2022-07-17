@@ -45,4 +45,17 @@ export const users = [
     createdAt: formatDate(),
     updatedAt: formatDate(),
   },
+  {
+    _id: uuid(),
+    firstName: "Mohit",
+    lastName: "Kumar",
+    username: "mohitkumar",
+    password: "mohitkumar123",
+    avatarImage: "",
+    bio: "I am web designer",
+    portfolioWebsite: "www.mohitkumar.in",
+    profileImageColor: "pink",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+  },
 ];
