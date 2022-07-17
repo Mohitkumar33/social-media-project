@@ -13,7 +13,7 @@ export const loginUser = createAsyncThunk(
   async ({ username, password }, { rejectWithValue }) => {
     try {
       const response = await loginService(username, password);
-      console.log(`this is response under loginUser function--> ${response}`)
+      console.log(`this is response under loginUser function--> ${response}`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);

@@ -42,18 +42,17 @@ const Login = () => {
   };
 
   const loginHandler = async (username, password) => {
-    console.log("login called", username, password)
+    console.log("login called", username, password);
     const response = await dispatch(loginUser({ username, password }));
-    console.log(`this is response --> ${response}`)
+    console.log(`this is response --> ${response}`);
     if (response?.payload.encodedToken) {
       navigate("/");
     }
   };
 
-  useEffect(()=>{
-    if(token) navigate("/")
-  },[])
-  
+  useEffect(() => {
+    if (token) navigate("/");
+  }, []);
 
   return (
     <Box sx={outerBoxStyles}>
