@@ -14,9 +14,13 @@ import { BsBookmarks } from "react-icons/bs";
 import { GoHome } from "react-icons/go";
 import { BsPeople } from "react-icons/bs";
 import { FcManager } from "react-icons/fc";
+import {FiLogOut} from "react-icons/fi"
 import { Link } from "react-router-dom";
+import { logout } from "../../features/auth/authSlice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
+  const dispatch = useDispatch()
   return (
     <Box pos="sticky" top={0} zIndex={1}>
       <Flex
@@ -47,7 +51,7 @@ const Navbar = () => {
             />
           </InputGroup>
         </Box>
-        <HStack spacing="1.8rem">
+        <HStack spacing="1.3rem">
           <Link to="/">
             <Icon as={GoHome} w="2rem" h="2rem" />
           </Link>
@@ -56,6 +60,9 @@ const Navbar = () => {
           <Link to="/accountHolderProfile">
             <Icon as={FcManager} w="2rem" h="2rem" />
           </Link>
+          <Icon _hover={{ cursor: 'pointer' }} onClick={()=>{dispatch(logout())
+          localStorage.removeItem("accessToken")
+          localStorage.removeItem("profileUser")}} as={FiLogOut} w="2rem" h="2rem"/>
         </HStack>
       </Flex>
     </Box>

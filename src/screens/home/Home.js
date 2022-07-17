@@ -6,9 +6,12 @@ import { PostCard } from "../../components/homePage/PostCard";
 import { WritePost } from "../../components/homePage/writePost";
 import { Suggestions } from "../../components/homePage/Suggestions";
 import { UserProfile } from "../../components/homePage/UserProfile";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { posts, status } = useSelector((store) => store.posts);
+  const { token } = useSelector((store)=>store.auth)
+  const navigate = useNavigate()
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,6 +19,9 @@ const Home = () => {
       dispatch(loadPosts());
     }
   }, [dispatch, status]);
+
+  if(!token) navigate("/login")
+  
   return (
     <Flex p="0.7rem 20%">
       <Box w="65%" mr="1rem">
