@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  status: "idle",
+  postsStatus: "idle",
   posts: [],
 };
 
@@ -17,11 +17,11 @@ const postSlice = createSlice({
   reducers: {},
   extraReducers: {
     [loadPosts.pending]: (state, action) => {
-      state.status = "loading";
+      state.postsStatus = "loading";
     },
     [loadPosts.fulfilled]: (state, action) => {
       state.posts = action.payload;
-      state.status = "fulfilled";
+      state.postsStatus = "fulfilled";
     },
   },
 });
